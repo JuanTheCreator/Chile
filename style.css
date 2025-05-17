@@ -267,6 +267,8 @@ footer {
   .navbar ul {
     flex-direction: column;
     gap: 20px;
+    justify-content: center; /* Asegura que los elementos estén centrados */
+    align-items: center; /* Centra los elementos horizontalmente */
   }
 
   .navbar a {
