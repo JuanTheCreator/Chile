@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4; /* Fondo claro original */
+  color: #2d2d2d; /* Color original */
+  line-height: 1.8; /* Mejor legibilidad */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: transparent; /* Eliminar fondo verde */
+  padding: 20px 0; /* Ajustar espaciado */
+  box-shadow: none; /* Eliminar sombra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(58%) saturate(356%) hue-rotate(91deg) brightness(92%) contrast(85%);
+  /* Cambiar el logo a verde oscuro */
+  height: 60px; /* Ajustar tamaño del logo */
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+header h1 {
+  display: none; /* Ocultar el título */
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: transparent; /* Fondo transparente */
+  padding: 10px 0; /* Espaciado ajustado */
+  border-bottom: 1px solid #1b4332; /* Línea inferior minimalista */
+  position: relative;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Más espacio entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600; /* Peso medio para un diseño limpio */
+  font-size: 16px; /* Tamaño ajustado */
+  color: #1b4332; /* Verde oscuro de Pacific Forest */
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Animación suave */
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #a3b18a; /* Verde claro de Pacific Forest */
+  transform: scale(1.05); /* Efecto de zoom ligero */
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #a3b18a; /* Verde claro de Pacific Forest */
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px; /* Espacio debajo del texto */
+  left: 0;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  width: 100%; /* Subrayado completo al pasar el cursor */
+}
+
+main {
+  padding: 50px 20px;
+}
+
+main h2 {
+  font-size: 34px; /* Tamaño más grande */
+  font-weight: 800;
+  color: #1b4332; /* Verde oscuro original */
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase; /* Mayúsculas */
+}
+
+.subtitulo {
+  font-size: 18px; /* Tamaño más grande */
+  color: #6c757d; /* Gris profesional */
+  font-weight: 600; /* Más énfasis */
+  margin-bottom: 35px;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #d9ead3; /* Verde muy claro */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1b4332; /* Verde oscuro */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.intro-text p {
+  font-size: 18px;
+  color: #555;
+}
+
+.intro-image {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Propósito */
+.proposito {
+  background-color: #d9ead3; /* Verde muy claro */
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.proposito h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b4332; /* Verde oscuro */
+  margin-bottom: 15px;
+}
+
+.proposito p {
+  font-size: 18px;
+  color: #444;
+}
+
+.proposito blockquote {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b4332; /* Verde oscuro */
+  margin-top: 25px;
+  font-style: italic;
+}
+
+/* Valores */
+.valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.valor {
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  padding: 35px 25px; /* Más espacio */
+  text-align: center;
+  width: 250px;
+  transition: all 0.4s ease; /* Transición más suave */
+  border-top: 6px solid #1b4332; /* Verde oscuro original */
+}
+
+.valor:hover {
+  transform: translateY(-12px); /* Efecto más pronunciado */
+  border-top: 6px solid #a3b18a; /* Verde claro original */
+}
+
+.valor img {
+  height: 55px;
+  margin-bottom: 15px;
+}
+
+.valor h3 {
+  color: #1b4332; /* Verde oscuro */
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.valor p {
+  color: #444;
+  font-size: 15px;
+}
+
+footer {
+  background-color: #1b4332; /* Verde oscuro original */
+  color: white; /* Blanco original */
+  text-align: center;
+  padding: 30px 0; /* Más espacio */
+  font-size: 15px; /* Tamaño más grande */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+  }
+
+  .intro-image img {
+    max-width: 90%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .proposito h2 {
+    font-size: 24px;
+  }
+
+  .proposito p {
+    font-size: 16px;
+  }
+
+  .valores {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .valor {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h2 {
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .proposito h2 {
+    font-size: 20px;
+  }
+
+  .proposito p {
+    font-size: 14px;
+  }
+
+  .valor h3 {
+    font-size: 18px;
+  }
+
+  .valor p {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
